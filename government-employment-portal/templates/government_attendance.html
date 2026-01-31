@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">📅 Attendance Records</h1>
+
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Worker Name</th>
+                    <th>Job ID</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-03-20</td>
+                    <td>Ramesh Kumar</td>
+                    <td>J001</td>
+                    <td><span class="badge success">Present</span></td>
+                </tr>
+                <tr>
+                    <td>2024-03-20</td>
+                    <td>Lakshmi Devi</td>
+                    <td>J002</td>
+                    <td><span class="badge danger">Absent</span></td>
+                </tr>
+                <tr>
+                    <td>2024-03-21</td>
+                    <td>Suresh Babu</td>
+                    <td>J001</td>
+                    <td><span class="badge success">Present</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

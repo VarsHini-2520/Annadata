@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Employment Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="landing-page">
+    <div class="landing-container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge">🇮🇳 Government of India Initiative</div>
+                <h1 class="hero-title">
+                    <span class="title-line">National Employment</span>
+                    <span class="title-line gradient-text">Guarantee Portal</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Transparent, fair, and efficient employment allocation ensuring
+                    livelihood security for workers across India
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Workers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Jobs</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Transparent</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portal-selection">
+            <h2 class="selection-title">Select Your Portal</h2>
+            <div class="portal-grid">
+                <div class="portal-card">
+                    <div class="portal-icon">🏛️</div>
+                    <h3 class="portal-name">Government Officer</h3>
+                    <p class="portal-desc">Create jobs, monitor allocations, track attendance and wages</p>
+                    <ul class="portal-features">
+                        <li>✓ Job Creation & Management</li>
+                        <li>✓ Automated Fair Allocation</li>
+                        <li>✓ Real-time Monitoring</li>
+                    </ul>
+                    <div class="portal-actions">
+                        <a href="/login" class="btn btn-primary">Login</a>
+                        <a href="/signup" class="btn btn-secondary">Sign Up</a>
+                    </div>
+                </div>
+
+                <div class="portal-card">
+                    <div class="portal-icon">👷</div>
+                    <h3 class="portal-name">Worker</h3>
+                    <p class="portal-desc">View job notifications, track attendance and earnings</p>
+                    <ul class="portal-features">
+                        <li>✓ Job Notifications</li>
+                        <li>✓ Attendance History</li>
+                        <li>✓ Wage Tracking</li>
+                    </ul>
+                    <div class="portal-actions">
+                        <a href="/login" class="btn btn-primary">Login</a>
+                        <a href="/signup" class="btn btn-secondary">Sign Up</a>
+                    </div>
+                </div>
+
+                <div class="portal-card">
+                    <div class="portal-icon">🧑‍💼</div>
+                    <h3 class="portal-name">Supervisor</h3>
+                    <p class="portal-desc">Mark attendance with OTP, manage worksites</p>
+                    <ul class="portal-features">
+                        <li>✓ OTP-based Attendance</li>
+                        <li>✓ Worksite Management</li>
+                        <li>✓ Daily Reports</li>
+                    </ul>
+                    <div class="portal-actions">
+                        <a href="/login" class="btn btn-primary">Login</a>
+                        <a href="/signup" class="btn btn-secondary">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="landing-footer">
+            <p>© 2025 Government Employment Portal • Transparent & Fair</p>
+        </footer>
+    </div>
+</body>
+</html>

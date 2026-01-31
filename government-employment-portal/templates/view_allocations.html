@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">Allocations: {{ job.job_id }}</h1>
+    <h3>Allocated Workers</h3>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Worker ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Disability</th>
+                    <th>Days Worked</th>
+                    <th>Priority</th>
+                    <th>Response</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for w in allocated %}
+                <tr>
+                    <td>{{ w.worker_id }}</td>
+                    <td>{{ w.name }}</td>
+                    <td>{{ w.phone }}</td>
+                    <td>{{ w.disability_status }}</td>
+                    <td>{{ w.days_worked }}</td>
+                    <td><strong>{{ w.priority_score }}</strong></td>
+                    <td><span class="badge">{{ w.response }}</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <h3>Waiting List</h3>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Worker ID</th>
+                    <th>Name</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for w in waiting %}
+                <tr>
+                    <td>{{ w.worker_id }}</td>
+                    <td>{{ w.name }}</td>
+                    <td>{{ w.priority_score }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

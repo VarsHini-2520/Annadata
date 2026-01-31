@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">💼 Government Jobs</h1>
+
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Job ID</th>
+                    <th>District</th>
+                    <th>Work Type</th>
+                    <th>Start Date</th>
+                    <th>Workers Required</th>
+                    <th>Daily Wage</th>
+                    <th>View</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>J001</td>
+                    <td>Bangalore Rural</td>
+                    <td>Road Construction</td>
+                    <td>2024-03-01</td>
+                    <td>15</td>
+                    <td>₹350</td>
+                    <td><a href="#" class="btn btn-sm">View</a></td>
+                </tr>
+                <tr>
+                    <td>J002</td>
+                    <td>Mysore</td>
+                    <td>Water Tank Repair</td>
+                    <td>2024-03-05</td>
+                    <td>10</td>
+                    <td>₹300</td>
+                    <td><a href="#" class="btn btn-sm">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

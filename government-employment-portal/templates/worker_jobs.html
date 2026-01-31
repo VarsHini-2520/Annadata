@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">💼 My Jobs</h1>
+
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Job ID</th>
+                    <th>Work Type</th>
+                    <th>Start Date</th>
+                    <th>Daily Wage</th>
+                    <th>Status</th>
+                    <th>AI Call Response</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>J001</td>
+                    <td>Road Construction</td>
+                    <td>2024-03-01</td>
+                    <td>₹350</td>
+                    <td><span class="badge success">Allocated</span></td>
+                    <td><span class="badge warning">Pending</span></td>
+                    <td>
+                        <button class="btn btn-sm">Accept</button>
+                        <button class="btn btn-sm">Not Interested</button>
+                        <button class="btn btn-sm btn-danger">Decline</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>J002</td>
+                    <td>Water Tank Repair</td>
+                    <td>2024-03-10</td>
+                    <td>₹300</td>
+                    <td><span class="badge success">Allocated</span></td>
+                    <td><span class="badge success">Accepted</span></td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

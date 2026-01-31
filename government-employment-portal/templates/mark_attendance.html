@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">Mark Attendance</h1>
+    {% if job %}
+    <p>{{ job.work_type }} - {{ job.district }}</p>
+    {% endif %}
+    
+    {% if workers %}
+    <h3>Workers List</h3>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Worker ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for w in workers %}
+                <tr>
+                    <td>{{ w.worker_id }}</td>
+                    <td>{{ w.name }}</td>
+                    <td>{{ w.phone }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+    
+    <div class="form-card">
+        <h3>OTP Verification</h3>
+        <form method="POST" class="form-layout">
+            <div class="form-group">
+                <label>Worker Phone</label>
+                <input type="tel" name="phone" value="{{ phone if phone else '' }}" required>
+            </div>
+            {% if otp_sent %}
+            <div class="form-group">
+                <label>Enter OTP</label>
+                <input type="text" name="otp" pattern="[0-9]{6}" required>
+                <small>Check console for OTP</small>
+            </div>
+            {% endif %}
+            <button type="submit" class="btn btn-primary">
+                {% if otp_sent %}Verify & Mark Present{% else %}Send OTP{% endif %}
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

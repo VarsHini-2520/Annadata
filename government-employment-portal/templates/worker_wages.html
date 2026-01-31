@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">💰 My Wages</h1>
+
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Job ID</th>
+                    <th>Work Type</th>
+                    <th>Days Worked</th>
+                    <th>Daily Wage</th>
+                    <th>Total Amount</th>
+                    <th>Payment Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>J001</td>
+                    <td>Road Construction</td>
+                    <td>18</td>
+                    <td>₹350</td>
+                    <td><strong>₹6,300</strong></td>
+                    <td><span class="badge success">Paid</span></td>
+                </tr>
+                <tr>
+                    <td>J002</td>
+                    <td>Water Tank Repair</td>
+                    <td>15</td>
+                    <td>₹300</td>
+                    <td><strong>₹4,500</strong></td>
+                    <td><span class="badge warning">Pending</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">📋 Assigned Jobs</h1>
+
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Job ID</th>
+                    <th>Work Type</th>
+                    <th>District</th>
+                    <th>Workers Assigned</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>J001</td>
+                    <td>Road Construction</td>
+                    <td>Bangalore Rural</td>
+                    <td>15</td>
+                    <td>
+                        <a href="/supervisor/mark-attendance/J001" class="btn btn-sm">
+                            Mark Attendance
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>J002</td>
+                    <td>Water Tank Repair</td>
+                    <td>Mysore</td>
+                    <td>10</td>
+                    <td>
+                        <a href="/supervisor/mark-attendance/J002" class="btn btn-sm">
+                            Mark Attendance
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>J003</td>
+                    <td>Drainage Cleaning</td>
+                    <td>Hubli</td>
+                    <td>12</td>
+                    <td>
+                        <a href="/supervisor/mark-attendance/J003" class="btn btn-sm">
+                            Mark Attendance
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p style="margin-top:15px;color:var(--text-light);font-size:0.9rem;">
+        ⚠️ Attendance can only be marked for jobs assigned to you. Past attendance records cannot be edited.
+    </p>
+</div>
+{% endblock %}

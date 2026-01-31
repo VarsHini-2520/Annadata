@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Government Employment Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% if session.user_id %}
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🏛️</span>
+                <span class="brand-text">Employment Portal</span>
+            </div>
+            <div class="nav-menu">
+                {% if session.role == 'government' %}
+                <a href="/government/dashboard" class="nav-link">Dashboard</a>
+                <a href="/government/create-job" class="nav-link">Create Job</a>
+                <a href="/government/jobs" class="nav-link">Jobs</a>
+                <a href="/government/attendance" class="nav-link">Attendance</a>
+                <a href="/government/wages" class="nav-link">Wages</a>
+                {% elif session.role == 'worker' %}
+                <a href="/worker/dashboard" class="nav-link">Dashboard</a>
+                <a href="/worker/profile" class="nav-link">Profile</a>
+                <a href="/worker/jobs" class="nav-link">My Jobs</a>
+                <a href="/worker/attendance" class="nav-link">Attendance</a>
+                <a href="/worker/wages" class="nav-link">Wages</a>
+                {% elif session.role == 'supervisor' %}
+                <a href="/supervisor/dashboard" class="nav-link">Dashboard</a>
+                <a href="/supervisor/jobs" class="nav-link">Jobs</a>
+                <a href="/supervisor/attendance-summary" class="nav-link">Attendance</a>
+                {% endif %}
+                <div class="nav-profile">
+                    <span class="profile-name">{{ session.name }}</span>
+                    <a href="/logout" class="btn-logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% endif %}
+    
+    <div class="main-content">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-container">
+            {% for category, message in messages %}
+            <div class="flash flash-{{ category }}">
+                <span>{{ message }}</span>
+                <button class="flash-close" onclick="this.parentElement.remove()">×</button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        
+        {% block content %}{% endblock %}
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

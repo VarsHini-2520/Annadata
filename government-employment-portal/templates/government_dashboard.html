@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1 class="page-title">🏛 Government Dashboard</h1>
+        <a href="/government/create-job" class="btn btn-primary">+ Create Job</a>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div class="stat-content">
+                <div class="stat-value">125</div>
+                <div class="stat-label">Total Workers</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">💼</div>
+            <div class="stat-content">
+                <div class="stat-value">8</div>
+                <div class="stat-label">Active Jobs</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+                <div class="stat-value">68</div>
+                <div class="stat-label">Workers Allocated</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-content">
+                <div class="stat-value">₹4,52,300</div>
+                <div class="stat-label">Wages Paid</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🎓</div>
+            <div class="stat-content">
+                <div class="stat-value">14</div>
+                <div class="stat-label">Upskilled Workers</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

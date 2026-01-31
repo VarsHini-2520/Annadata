@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="dashboard-container">
+    <h1 class="page-title">👷 Worker Dashboard</h1>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">📅</div>
+            <div class="stat-content">
+                <div class="stat-value">42</div>
+                <div class="stat-label">Days Worked</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">💼</div>
+            <div class="stat-content">
+                <div class="stat-value">2</div>
+                <div class="stat-label">Active Jobs</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+                <div class="stat-value">38</div>
+                <div class="stat-label">Days Present</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div class="stat-content">
+                <div class="stat-value">₹13,300</div>
+                <div class="stat-label">Total Earnings</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-container">
+    <h1 class="page-title">💰 Wage Management</h1>
+
+    <a href="#" class="btn btn-primary">Calculate Wages</a>
+
+    <div class="table-container" style="margin-top: 20px;">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Worker Name</th>
+                    <th>Job ID</th>
+                    <th>Days Worked</th>
+                    <th>Daily Wage</th>
+                    <th>Total Wage</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ramesh Kumar</td>
+                    <td>J001</td>
+                    <td>18</td>
+                    <td>₹350</td>
+                    <td><strong>₹6,300</strong></td>
+                    <td><span class="badge success">Paid</span></td>
+                </tr>
+                <tr>
+                    <td>Lakshmi Devi</td>
+                    <td>J002</td>
+                    <td>15</td>
+                    <td>₹300</td>
+                    <td><strong>₹4,500</strong></td>
+                    <td><span class="badge warning">Pending</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

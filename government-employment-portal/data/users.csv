@@ -1,0 +1,4 @@
+user_id,name,email,phone,password,role,district,aadhaar,disability_status,days_worked,created_at
+WOR0001,VARSHINI.M,2022varshini.m@vidyashilp.edu.in,9964222888,f969fdbe811d8a66010d6f8973246763147a2a0914afc8087839e29b563a5af0,worker,Banglore,123456789101.0,No,0,2026-01-31 10:24:55
+SUP0002,Ammu,amulya20@gmail.com,8861781161,24befa27096a978edfaadaf0465718f9754494533dbb7d329807f13becaafcb3,supervisor,,,No,0,2026-01-31 11:17:58
+GOV0003,Kanchu,kanchuk629@gmail.com,9964222888,b243ae88023923f1a5a902de8534f290e9ea47fcae8bbe1e7e195db9e84ffd66,government,,,No,0,2026-01-31 11:19:10
